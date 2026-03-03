@@ -1,96 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f6f1e9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Through the Bible — Read the Bible in One Year</title>
+<meta name="description" content="A daily Bible reading plan to read through the entire Bible in one year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f6f1e9;--card:#faf8f4;
+  --fg:#1c1712;--fg2:#4a4238;--fg3:#8c8278;
+  --accent:#9e5a2a;--accent2:#c47a3a;--accent-glow:rgba(158,90,42,0.2);
+  --border:rgba(28,23,18,0.08);--border2:rgba(28,23,18,0.14);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,-apple-system,sans-serif;
+  --radius:14px;--radius-sm:10px;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);min-height:100vh;min-height:100dvh;overflow-x:hidden}
+
+/* BG */
+.bg-wash{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse at 25% 0%,rgba(158,90,42,.04) 0%,transparent 55%),
+             radial-gradient(ellipse at 75% 100%,rgba(196,122,58,.03) 0%,transparent 50%)}
+
+/* HEADER */
+.header{position:relative;z-index:1;text-align:center;padding:44px 20px 16px}
+.header-icon{width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent2),var(--accent));
+  display:flex;align-items:center;justify-content:center;margin:0 auto 14px;
+  box-shadow:0 4px 20px var(--accent-glow)}
+.header h1{font-family:var(--serif);font-size:28px;font-weight:500;letter-spacing:.01em;line-height:1.15}
+.header p{font-size:11.5px;color:var(--fg3);letter-spacing:.14em;text-transform:uppercase;margin-top:5px}
+
+/* MONTH TABS */
+.month-bar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--border)}
+.month-scroll{display:flex;gap:3px;overflow-x:auto;padding:10px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.month-scroll::-webkit-scrollbar{display:none}
+.mo{flex-shrink:0;scroll-snap-align:center;padding:7px 15px;border-radius:100px;border:1.5px solid transparent;
+  background:0;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--fg3);cursor:pointer;
+  transition:all .2s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.mo:hover{color:var(--fg2);background:rgba(158,90,42,.06)}
+.mo.active{background:var(--accent)!important;color:#fff!important;border-color:var(--accent);font-weight:600}
+.mo.current:not(.active){border-color:var(--accent);color:var(--accent)}
+
+.section-title{position:relative;z-index:1;font-family:var(--serif);font-size:22px;font-weight:500;text-align:center;padding:18px 20px 2px}
+
+/* DAY GRID */
+.grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);gap:7px;padding:14px;max-width:860px;margin:0 auto}
+@media(min-width:520px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:720px){.grid{grid-template-columns:repeat(4,1fr);gap:8px;padding:16px}}
+
+.day{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);
+  padding:13px 12px;text-align:left;cursor:pointer;font-family:var(--sans);color:var(--fg);
+  transition:all .18s;min-height:76px;display:flex;flex-direction:column;
+  -webkit-tap-highlight-color:transparent;position:relative}
+.day:hover{border-color:rgba(158,90,42,.22);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.day:active{transform:scale(.97)}
+.day.today{border-color:var(--accent)!important;
+  background:linear-gradient(140deg,rgba(158,90,42,.06),rgba(196,122,58,.03));
+  box-shadow:0 0 0 3px var(--accent-glow),0 4px 16px rgba(158,90,42,.08)}
+.day-top{display:flex;align-items:center;gap:5px;margin-bottom:5px}
+.day-n{font-size:20px;font-weight:600;font-family:var(--serif)}
+.day.today .day-n{color:var(--accent)}
+.today-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.day-r{font-size:10.5px;line-height:1.4;color:var(--fg3);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+.footer{position:relative;z-index:1;text-align:center;font-size:10.5px;color:var(--fg3);
+  padding:28px 20px 32px;border-top:1px solid var(--border);max-width:860px;margin:36px auto 0;line-height:1.7}
+.footer a{color:var(--accent);text-decoration:none}
+
+/* READING VIEW */
+.rv{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1);will-change:transform;overflow:hidden}
+.rv.open{transform:translateX(0)}
+
+.rv-head{flex-shrink:0;background:var(--bg);border-bottom:1px solid var(--border);
+  padding:max(env(safe-area-inset-top,12px),12px) 16px 14px}
+.rv-back{display:flex;align-items:center;gap:3px;background:0;border:0;
+  font-family:var(--sans);font-size:14px;color:var(--accent);cursor:pointer;padding:4px 0;margin-bottom:6px;
+  -webkit-tap-highlight-color:transparent}
+.rv-badge{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;
+  color:#fff;background:var(--accent);padding:2px 10px;border-radius:100px;margin-bottom:5px}
+.rv-head h2{font-family:var(--serif);font-size:26px;font-weight:500;margin:0 0 3px}
+.rv-head .summary{font-size:13px;color:var(--fg3);line-height:1.4}
+
+.rv-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 16px 32px}
+.rv-body::-webkit-scrollbar{width:4px}
+.rv-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+
+.book-group{margin-bottom:20px}
+.book-label{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--accent);margin-bottom:8px;padding-left:2px}
+
+.ch{border:1.5px solid var(--border);border-radius:var(--radius-sm);margin-bottom:6px;overflow:hidden;background:var(--card);transition:border-color .2s}
+.ch.open{border-color:rgba(158,90,42,.18)}
+.ch-btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:13px 14px;
+  background:0;border:0;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--fg);
+  cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ch-btn svg{transition:transform .25s;color:var(--fg3);flex-shrink:0}
+.ch.open .ch-btn svg{transform:rotate(180deg);color:var(--accent)}
+
+.ch-content{padding:0 14px 16px;animation:fadeIn .3s ease}
+.ch-loading{display:flex;align-items:center;gap:10px;padding:14px;font-size:13px;color:var(--fg3)}
+.spinner{width:18px;height:18px;border-radius:50%;border:2.5px solid var(--border);
+  border-top-color:var(--accent);animation:spin .7s linear infinite;flex-shrink:0}
+
+/* Verse rendering */
+.v-text{font-family:var(--serif);font-size:18px;line-height:1.8;color:var(--fg)}
+.v-text .heading{font-size:15px;font-weight:600;font-family:var(--sans);color:var(--accent);margin:18px 0 6px;display:block}
+.v-text .heading:first-child{margin-top:0}
+.v-text .vn{font-size:11px;font-weight:700;color:var(--accent);vertical-align:super;margin-right:2px;font-family:var(--sans);line-height:0}
+.v-text .poem1{margin-left:16px;display:block}
+.v-text .poem2{margin-left:32px;display:block}
+.v-text .lb{display:block;height:8px}
+
+.rv-nav{flex-shrink:0;display:flex;justify-content:space-between;padding:10px 16px;
+  background:var(--bg);border-top:1px solid var(--border);
+  padding-bottom:max(env(safe-area-inset-bottom,10px),10px)}
+.rv-nav button{display:flex;align-items:center;gap:4px;background:0;border:0;
+  font-family:var(--sans);font-size:13px;color:var(--accent);cursor:pointer;padding:8px 4px;
+  -webkit-tap-highlight-color:transparent}
+.rv-nav button:disabled{color:var(--fg3);opacity:.35;cursor:default}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div id="app">
+<div class="bg-wash"></div>
+
+<div id="calendar">
+  <header class="header">
+    <div class="header-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1c1712" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </svg>
+    </div>
+    <h1>Through the Bible</h1>
+    <p>Read the Bible in One Year · BSB</p>
+  </header>
+  <nav class="month-bar"><div class="month-scroll" id="monthScroll"></div></nav>
+  <h2 class="section-title" id="sectionTitle"></h2>
+  <div class="grid" id="dayGrid"></div>
+  <footer class="footer">
+    Through the Bible Reading Plan<br>
+    Scripture taken from the Berean Standard Bible (BSB). The Berean Bible is a wholly new translation of the Holy Bible, effective for public use.<br>
+    <a href="https://berean.bible/" target="_blank" rel="noopener">berean.bible</a> ·
+    Powered by <a href="https://bible.helloao.org" target="_blank" rel="noopener">Free Use Bible API</a>
+  </footer>
+</div>
+
+<div class="rv" id="rv">
+  <div class="rv-head">
+    <button class="rv-back" id="rvBack">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <span id="rvBackLabel"></span>
+    </button>
+    <div id="rvBadge"></div>
+    <h2 id="rvTitle"></h2>
+    <div class="summary" id="rvSummary"></div>
+  </div>
+  <div class="rv-body" id="rvBody"></div>
+  <div class="rv-nav">
+    <button id="prevDay"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg><span id="prevLabel"></span></button>
+    <button id="nextDay"><span id="nextLabel"></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+  </div>
+</div>
+</div>
+
+<script>
+const MO=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DIM=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+/* Abbreviation → { full name, API book code } */
+const B={
+"Gen":["Genesis","GEN"],"Ex":["Exodus","EXO"],"Lev":["Leviticus","LEV"],"Num":["Numbers","NUM"],
+"Deut":["Deuteronomy","DEU"],"Josh":["Joshua","JOS"],"Judg":["Judges","JDG"],"Ru":["Ruth","RUT"],
+"1 Sam":["1 Samuel","1SA"],"2 Sam":["2 Samuel","2SA"],"1 Kgs":["1 Kings","1KI"],"2 Kgs":["2 Kings","2KI"],
+"1 Chr":["1 Chronicles","1CH"],"2 Chr":["2 Chronicles","2CH"],"Ezr":["Ezra","EZR"],"Neh":["Nehemiah","NEH"],
+"Est":["Esther","EST"],"Job":["Job","JOB"],"Ps":["Psalms","PSA"],"Pro":["Proverbs","PRO"],
+"Eccl":["Ecclesiastes","ECC"],"Sg":["Song of Solomon","SNG"],"Isa":["Isaiah","ISA"],"Jer":["Jeremiah","JER"],
+"Lam":["Lamentations","LAM"],"Ez":["Ezekiel","EZK"],"Dan":["Daniel","DAN"],"Hos":["Hosea","HOS"],
+"Joel":["Joel","JOL"],"Am":["Amos","AMO"],"Obad":["Obadiah","OBA"],"Jon":["Jonah","JON"],
+"Mic":["Micah","MIC"],"Nah":["Nahum","NAM"],"Hab":["Habakkuk","HAB"],"Zeph":["Zephaniah","ZEP"],
+"Hag":["Haggai","HAG"],"Zech":["Zechariah","ZEC"],"Mal":["Malachi","MAL"],
+"Matt":["Matthew","MAT"],"Mk":["Mark","MRK"],"Lk":["Luke","LUK"],"Jn":["John","JHN"],
+"Acts":["Acts","ACT"],"Rom":["Romans","ROM"],"1 Cor":["1 Corinthians","1CO"],"2 Cor":["2 Corinthians","2CO"],
+"Gal":["Galatians","GAL"],"Eph":["Ephesians","EPH"],"Phil":["Philippians","PHP"],"Col":["Colossians","COL"],
+"1 Thes":["1 Thessalonians","1TH"],"2 Thes":["2 Thessalonians","2TH"],
+"1 Tim":["1 Timothy","1TI"],"2 Tim":["2 Timothy","2TI"],"Titus":["Titus","TIT"],"Phlm":["Philemon","PHM"],
+"Heb":["Hebrews","HEB"],"Jas":["James","JAS"],"1 Pt":["1 Peter","1PE"],"2 Pt":["2 Peter","2PE"],
+"1 Jn":["1 John","1JN"],"2 Jn":["2 John","2JN"],"3 Jn":["3 John","3JN"],"Jude":["Jude","JUD"],"Rev":["Revelation","REV"]
+};
+
+const P={
+0:{1:"Gen 1-3; Matt 1",2:"Gen 4-6; Matt 2",3:"Gen 7-9; Matt 3",4:"Gen 10-12; Matt 4",5:"Gen 13-15",6:"Gen 16-17; Matt 5",7:"Gen 18-19; Matt 6",8:"Gen 20-22",9:"Gen 23-24; Matt 7",10:"Gen 25-26",11:"Gen 27-28; Matt 8",12:"Gen 29-30; Matt 9",13:"Gen 31-32",14:"Gen 33-35; Matt 10",15:"Gen 36-38",16:"Gen 39-40; Matt 11",17:"Gen 41-42; Matt 12",18:"Gen 43-45",19:"Gen 46-48",20:"Gen 49-50; Matt 13",21:"Ex 1-3; Matt 14",22:"Ex 4-6",23:"Ex 7-8; Matt 15",24:"Ex 9-11",25:"Ex 12-13; Matt 16",26:"Ex 14-15; Matt 17",27:"Ex 16-18",28:"Ex 19-20; Matt 18",29:"Ex 21-22; Matt 19",30:"Ex 23-24; Matt 20",31:"Ex 25-26"},
+1:{1:"Ex 27-28; Matt 21",2:"Ex 29-30",3:"Ex 31-33",4:"Ex 34-35; Matt 22",5:"Ex 36-38",6:"Ex 39-40; Matt 23",7:"Lev 1-3",8:"Lev 4-5; Matt 24",9:"Lev 6-7; Matt 25",10:"Lev 8-10",11:"Lev 11-12",12:"Lev 13; Matt 26",13:"Lev 14",14:"Lev 15-16",15:"Lev 17-18; Matt 27",16:"Lev 19-20",17:"Lev 21-22; Matt 28",18:"Lev 23-24",19:"Lev 25; Mk 1",20:"Lev 26-27; Mk 2",21:"Num 1-2; Mk 3",22:"Num 3-4",23:"Num 5-6; Mk 4",24:"Num 7-8",25:"Num 9-11",26:"Num 12-14; Mk 5",27:"Num 15-16; Mk 6",28:"Num 17-19"},
+2:{1:"Num 20-22",2:"Num 23-25; Mk 7",3:"Num 26-28; Mk 8",4:"Num 29-31; Mk 9",5:"Num 32-34",6:"Num 35-36; Mk 10",7:"Deut 1-3",8:"Deut 4-6; Mk 11",9:"Deut 7-9",10:"Deut 10-12; Mk 12",11:"Deut 13-15",12:"Deut 16-18; Mk 13",13:"Deut 19-21",14:"Deut 22-24",15:"Deut 25-27; Mk 14",16:"Deut 28-29",17:"Deut 30-31; Mk 15",18:"Deut 32-34",19:"Josh 1-3; Mk 16",20:"Josh 4-7",21:"Josh 8-10",22:"Josh 11-13",23:"Josh 14-15; Lk 1",24:"Josh 16-18; Lk 2",25:"Josh 19-21",26:"Josh 22-24; Lk 3",27:"Judg 1-3; Lk 4",28:"Judg 4-6",29:"Judg 7-8; Lk 5",30:"Judg 9-10",31:"Judg 11-12; Lk 6"},
+3:{1:"Judg 13-15",2:"Judg 16-18; Lk 7",3:"Judg 19-21",4:"Ru 1-4",5:"1 Sam 1-3; Lk 8",6:"1 Sam 4-7",7:"1 Sam 8-10",8:"1 Sam 11-12; Lk 9",9:"1 Sam 13-14",10:"1 Sam 15-16; Lk 10",11:"1 Sam 17-18; Lk 11",12:"1 Sam 19-21",13:"1 Sam 22-24",14:"1 Sam 25-26; Lk 12",15:"1 Sam 27-29",16:"1 Sam 30-31; Lk 13",17:"2 Sam 1-2; Lk 14",18:"2 Sam 3-5",19:"2 Sam 6-8",20:"2 Sam 9-11; Lk 15",21:"2 Sam 12-13; Lk 16",22:"2 Sam 14-15; Lk 17",23:"2 Sam 16-18",24:"2 Sam 19-20; Lk 18",25:"2 Sam 21-22",26:"2 Sam 23-24; Lk 19",27:"1 Kgs 1-2",28:"1 Kgs 3-5; Lk 20",29:"1 Kgs 6-7",30:"1 Kgs 8-9"},
+4:{1:"1 Kgs 10-11; Lk 21",2:"1 Kgs 12-13",3:"1 Kgs 14-15; Lk 22",4:"1 Kgs 16-18",5:"1 Kgs 19-20; Lk 23",6:"1 Kgs 21-22",7:"2 Kgs 1-3",8:"2 Kgs 4-6; Lk 24",9:"2 Kgs 7-9",10:"2 Kgs 10-12; Jn 1",11:"2 Kgs 13-14; Jn 2",12:"2 Kgs 15-16; Jn 3",13:"2 Kgs 17-18",14:"2 Kgs 19-21",15:"2 Kgs 22-23; Jn 4",16:"2 Kgs 24-25; Jn 5",17:"1 Chr 1-3",18:"1 Chr 4-7",19:"1 Chr 8-10",20:"1 Chr 11-12; Jn 6",21:"1 Chr 13-15; Jn 7",22:"1 Chr 16-18",23:"1 Chr 19-21; Jn 8",24:"1 Chr 22-24",25:"1 Chr 25-27",26:"1 Chr 28-29; Jn 9",27:"2 Chr 1-3; Jn 10",28:"2 Chr 4-6",29:"2 Chr 7-9",30:"2 Chr 10-12; Jn 11",31:"2 Chr 13-14"},
+5:{1:"2 Chr 15-16; Jn 12",2:"2 Chr 17-18; Jn 13",3:"2 Chr 19-20",4:"2 Chr 21-22; Jn 14",5:"2 Chr 23-24; Jn 15",6:"2 Chr 25-27; Jn 16",7:"2 Chr 28-29; Jn 17",8:"2 Chr 30-31; Jn 18",9:"2 Chr 32-33",10:"2 Chr 34-36; Jn 19",11:"Ezr 1-2",12:"Ezr 3-5; Jn 20",13:"Ezr 6-8; Jn 21",14:"Ezr 9-10; Acts 1",15:"Neh 1-3",16:"Neh 4-6; Acts 2",17:"Neh 7-9; Acts 3",18:"Neh 10-11; Acts 4",19:"Neh 12-13",20:"Est 1-2; Acts 5",21:"Est 3-5",22:"Est 6-8; Acts 6",23:"Est 9-10; Acts 7",24:"Job 1-2",25:"Job 3-4",26:"Job 5-7; Acts 8",27:"Job 8-10",28:"Job 11-13; Acts 9",29:"Job 14-16",30:"Job 17-19"},
+6:{1:"Job 20-21; Acts 10",2:"Job 22-24; Acts 11",3:"Job 25-27; Acts 12",4:"Job 28-29; Acts 13",5:"Job 30-31",6:"Job 32-33; Acts 14",7:"Job 34-35; Acts 15",8:"Job 36-37",9:"Job 38-40",10:"Job 41-42; Acts 16",11:"Ps 1-3; Acts 17",12:"Ps 4-6",13:"Ps 7-9; Acts 18",14:"Ps 10-12",15:"Ps 13-15; Acts 19",16:"Ps 16-17; Acts 20",17:"Ps 18-19",18:"Ps 20-22",19:"Ps 23-25; Acts 21",20:"Ps 26-28; Acts 22",21:"Ps 29-30; Acts 23",22:"Ps 31-32",23:"Ps 33-34; Acts 24",24:"Ps 35-36; Acts 25",25:"Ps 37-39; Acts 26",26:"Ps 40-42; Acts 27",27:"Ps 43-45",28:"Ps 46-48; Acts 28",29:"Ps 49-50; Rom 1",30:"Ps 51-53; Rom 2",31:"Ps 54-56; Rom 3"},
+7:{1:"Ps 57-59; Rom 4",2:"Ps 60-62; Rom 5",3:"Ps 63-65; Rom 6",4:"Ps 66-67; Rom 7",5:"Ps 68-69",6:"Ps 70-71; Rom 8",7:"Ps 72-73; Rom 9",8:"Ps 74-76",9:"Ps 77-78; Rom 10",10:"Ps 79-80; Rom 11",11:"Ps 81-83",12:"Ps 84-86; Rom 12",13:"Ps 87-88; Rom 13",14:"Ps 89-90; Rom 14",15:"Ps 91-93; Rom 15",16:"Ps 94-96",17:"Ps 97-99; Rom 16",18:"Ps 100-102; 1 Cor 1",19:"Ps 103-104; 1 Cor 2",20:"Ps 105-106; 1 Cor 3",21:"Ps 107-109; 1 Cor 4",22:"Ps 110-112; 1 Cor 5",23:"Ps 113-115; 1 Cor 6",24:"Ps 116-118; 1 Cor 7",25:"Ps 119",26:"Ps 120; 1 Cor 8",27:"Ps 121-122; 1 Cor 9",28:"Ps 123-125; 1 Cor 10",29:"Ps 126-128",30:"Ps 129-131; 1 Cor 11",31:"Ps 132-134"},
+8:{1:"Ps 135-136; 1 Cor 12",2:"Ps 137-139; 1 Cor 13",3:"Ps 140-142",4:"Ps 143-145; 1 Cor 14",5:"Ps 146-147; 1 Cor 15",6:"Ps 148-150",7:"Pro 1-2; 1 Cor 16",8:"Pro 3-5; 2 Cor 1",9:"Pro 6-7; 2 Cor 2",10:"Pro 8-9; 2 Cor 3",11:"Pro 10-12; 2 Cor 4",12:"Pro 13-15; 2 Cor 5",13:"Pro 16-18; 2 Cor 6",14:"Pro 19-21; 2 Cor 7",15:"Pro 22-24; 2 Cor 8",16:"Pro 25-26; 2 Cor 9",17:"Pro 27-29; 2 Cor 10",18:"Pro 30-31; 2 Cor 11",19:"Eccl 1-3",20:"Eccl 4-6; 2 Cor 12",21:"Eccl 7-9; 2 Cor 13",22:"Eccl 10-12; Gal 1",23:"Sg 1-3; Gal 2",24:"Sg 4-5; Gal 3",25:"Sg 6-8; Gal 4",26:"Isa 1-2; Gal 5",27:"Isa 3-4; Gal 6",28:"Isa 5-6; Eph 1",29:"Isa 7-8; Eph 2",30:"Isa 9-10; Eph 3"},
+9:{1:"Isa 11-13; Eph 4",2:"Isa 14-16",3:"Isa 17-19; Eph 5",4:"Isa 20-22; Eph 6",5:"Isa 23-25; Phil 1",6:"Isa 26-27; Phil 2",7:"Isa 28-29; Phil 3",8:"Isa 30-31; Phil 4",9:"Isa 32-33; Col 1",10:"Isa 34-36; Col 2",11:"Isa 37-38; Col 3",12:"Isa 39-40; Col 4",13:"Isa 41-42; 1 Thes 1",14:"Isa 43-44; 1 Thes 2",15:"Isa 45-46; 1 Thes 3",16:"Isa 47-49; 1 Thes 4",17:"Isa 50-52; 1 Thes 5",18:"Isa 53-55; 2 Thes 1",19:"Isa 56-58; 2 Thes 2",20:"Isa 59-61; 2 Thes 3",21:"Isa 62-64; 1 Tim 1",22:"Isa 65-66; 1 Tim 2",23:"Jer 1-2; 1 Tim 3",24:"Jer 3-5; 1 Tim 4",25:"Jer 6-8; 1 Tim 5",26:"Jer 9-11; 1 Tim 6",27:"Jer 12-14; 2 Tim 1",28:"Jer 15-17; 2 Tim 2",29:"Jer 18-19; 2 Tim 3",30:"Jer 20-21; 2 Tim 4",31:"Jer 22-23; Titus 1"},
+10:{1:"Jer 24-26; Titus 2",2:"Jer 27-29; Titus 3",3:"Jer 30-31; Phlm 1",4:"Jer 32-33; Heb 1",5:"Jer 34-36; Heb 2",6:"Jer 37-39; Heb 3",7:"Jer 40-42; Heb 4",8:"Jer 43-45; Heb 5",9:"Jer 46-47; Heb 6",10:"Jer 48-49; Heb 7",11:"Jer 50; Heb 8",12:"Jer 51-52; Heb 9",13:"Lam 1-2; Heb 10",14:"Lam 3-5",15:"Ez 1-2",16:"Ez 3-4; Heb 11",17:"Ez 5-7; Heb 12",18:"Ez 8-10; Heb 13",19:"Ez 11-13; Jas 1",20:"Ez 14-15; Jas 2",21:"Ez 16-17; Jas 3",22:"Ez 18-19; Jas 4",23:"Ez 20-21; Jas 5",24:"Ez 22-23; 1 Pt 1",25:"Ez 24-26; 1 Pt 2",26:"Ez 27-29; 1 Pt 3",27:"Ez 30-32; 1 Pt 4",28:"Ez 33-34; 1 Pt 5",29:"Ez 35-36; 2 Pt 1",30:"Ez 37-39; 2 Pt 2"},
+11:{1:"Ez 40-41; 2 Pt 3",2:"Ez 42-44; 1 Jn 1",3:"Ez 45-46; 1 Jn 2",4:"Ez 47-48; 1 Jn 3",5:"Dan 1-2; 1 Jn 4",6:"Dan 3-4; 1 Jn 5",7:"Dan 5-7; 2 Jn 1",8:"Dan 8-10; 3 Jn 1",9:"Dan 11-12; Jude 1",10:"Hos 1-4; Rev 1",11:"Hos 5-8; Rev 2",12:"Hos 9-11; Rev 3",13:"Hos 12-14; Rev 4",14:"Joel 1-3; Rev 5",15:"Am 1-3; Rev 6",16:"Am 4-6; Rev 7",17:"Am 7-9; Rev 8",18:"Obad 1; Rev 9",19:"Jon 1-4; Rev 10",20:"Mic 1-3; Rev 11",21:"Mic 4-5; Rev 12",22:"Mic 6-7; Rev 13",23:"Nah 1-3; Rev 14",24:"Hab 1-3; Rev 15",25:"Zeph 1-3; Rev 16",26:"Hag 1-2; Rev 17",27:"Zech 1-4; Rev 18",28:"Zech 5-8; Rev 19",29:"Zech 9-12; Rev 20",30:"Zech 13-14; Rev 21",31:"Mal 1-4; Rev 22"}
+};
+
+/* ─── STATE ─── */
+const now=new Date(),TM=now.getMonth(),TD=now.getDate();
+let curMonth=TM,curDay=null,openKey=null;
+const cache={};
+
+/* ─── PARSE ─── */
+function parseReading(s){
+  return s.split(";").map(x=>x.trim()).map(seg=>{
+    const m=seg.match(/^(\d?\s?[A-Za-z]+)\s+(.+)$/);
+    if(!m)return null;
+    const ab=m[1].trim(),info=B[ab];
+    if(!info)return null;
+    return{ab,full:info[0],code:info[1],ch:m[2].trim()};
+  }).filter(Boolean);
+}
+
+function expandCh(code,full,ch){
+  const m=ch.match(/^(\d+)-(\d+)$/);
+  if(m){const o=[];for(let c=+m[1];c<=+m[2];c++)o.push({label:`${full} ${c}`,code,num:c});return o;}
+  return[{label:`${full} ${ch}`,code,num:+ch}];
+}
+
+/* ─── RENDER VERSE JSON → HTML ─── */
+function renderContent(content){
+  let html='';
+  for(const item of content){
+    if(item.type==='heading'){
+      html+=`<span class="heading">${item.content.join('')}</span>`;
+    } else if(item.type==='verse'){
+      html+=`<span class="vn">${item.number} </span>`;
+      for(const part of item.content){
+        if(typeof part==='string'){html+=part;}
+        else if(part.text){
+          if(part.poem===1)html+=`<span class="poem1">${part.text}</span>`;
+          else if(part.poem===2)html+=`<span class="poem2">${part.text}</span>`;
+          else html+=part.text;
+        }
+        else if(part.lineBreak)html+='<br>';
+        // skip noteId
+      }
+      html+=' ';
+    } else if(item.type==='line_break'){
+      html+='<span class="lb"></span>';
+    }
+  }
+  return html;
+}
+
+/* ─── FETCH ─── */
+async function fetchChapter(code,num){
+  const key=`${code}/${num}`;
+  if(cache[key])return cache[key];
+  try{
+    const r=await fetch(`https://bible.helloao.org/api/BSB/${code}/${num}.json`);
+    const d=await r.json();
+    if(d.chapter&&d.chapter.content){
+      const html=renderContent(d.chapter.content);
+      cache[key]=html;
+      return html;
+    }
+    return '<span style="color:var(--fg3)">Passage not found.</span>';
+  }catch{
+    return '<span style="color:var(--fg3)">Network error — please check your connection.</span>';
+  }
+}
+
+/* ═══ CALENDAR ═══ */
+function renderMonths(){
+  const el=document.getElementById("monthScroll");
+  el.innerHTML=MO.map((m,i)=>{
+    const cls=["mo"];if(i===curMonth)cls.push("active");if(i===TM)cls.push("current");
+    return`<button class="${cls.join(" ")}" data-m="${i}">${m.slice(0,3)}</button>`;
+  }).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>{curMonth=+b.dataset.m;render();
+    const a=el.querySelector(".active");if(a)a.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+  });
+  requestAnimationFrame(()=>{const a=el.querySelector(".active");if(a)a.scrollIntoView({behavior:"auto",inline:"center",block:"nearest"});});
+}
+
+function renderGrid(){
+  const el=document.getElementById("dayGrid"),dc=DIM[curMonth];
+  el.innerHTML=Array.from({length:dc},(_,i)=>i+1).map(d=>{
+    const r=P[curMonth]?.[d]||"",it=curMonth===TM&&d===TD;
+    return`<button class="day${it?" today":""}" data-d="${d}" id="d-${curMonth}-${d}">
+      <div class="day-top"><span class="day-n">${d}</span>${it?'<span class="today-dot"></span>':''}</div>
+      <div class="day-r">${r}</div>
+    </button>`;
+  }).join("");
+  el.querySelectorAll(".day").forEach(b=>b.onclick=()=>openDay(+b.dataset.d));
+}
+
+function render(){renderMonths();document.getElementById("sectionTitle").textContent=MO[curMonth];renderGrid();}
+
+/* ═══ READING VIEW ═══ */
+async function toggleCh(key,code,num){
+  const el=document.getElementById("ch-"+key);if(!el)return;
+  if(openKey===key){el.classList.remove("open");const c=el.querySelector(".ch-content");if(c)c.remove();openKey=null;return;}
+  if(openKey!==null){const prev=document.getElementById("ch-"+openKey);if(prev){prev.classList.remove("open");const c=prev.querySelector(".ch-content");if(c)c.remove();}}
+  openKey=key;el.classList.add("open");
+  const loader=document.createElement("div");loader.className="ch-loading";loader.innerHTML='<div class="spinner"></div><span>Loading scripture…</span>';
+  const wrap=document.createElement("div");wrap.className="ch-content";wrap.appendChild(loader);el.appendChild(wrap);
+  const html=await fetchChapter(code,num);
+  wrap.innerHTML=`<div class="v-text">${html}</div>`;
+}
+
+function openDay(day){
+  curDay=day;openKey=null;
+  const str=P[curMonth]?.[day]||"",readings=parseReading(str),it=curMonth===TM&&day===TD,dc=DIM[curMonth];
+  document.getElementById("rvBackLabel").textContent=MO[curMonth];
+  document.getElementById("rvBadge").innerHTML=it?'<span class="rv-badge">Today</span>':'';
+  document.getElementById("rvTitle").textContent=`${MO[curMonth]} ${day}`;
+  document.getElementById("rvSummary").textContent=str;
+
+  const body=document.getElementById("rvBody");
+  let h='';
+  let idx=0;
+  readings.forEach(r=>{
+    const chs=expandCh(r.code,r.full,r.ch);
+    h+=`<div class="book-group"><div class="book-label">${r.full} ${r.ch}</div>`;
+    chs.forEach(c=>{
+      h+=`<div class="ch" id="ch-${idx}" data-k="${idx}" data-code="${c.code}" data-num="${c.num}">
+        <button class="ch-btn"><span>${c.label}</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button></div>`;
+      idx++;
+    });
+    h+=`</div>`;
+  });
+  body.innerHTML=h;body.scrollTop=0;
+
+  // Auto-open first
+  const first=body.querySelector(".ch");
+  if(first)toggleCh(first.dataset.k,first.dataset.code,+first.dataset.num);
+
+  body.querySelectorAll(".ch-btn").forEach(btn=>{
+    const ch=btn.parentElement;
+    btn.onclick=()=>toggleCh(ch.dataset.k,ch.dataset.code,+ch.dataset.num);
+  });
+
+  const prev=document.getElementById("prevDay"),next=document.getElementById("nextDay");
+  prev.disabled=day<=1;next.disabled=day>=dc;
+  document.getElementById("prevLabel").textContent=day>1?`Day ${day-1}`:'';
+  document.getElementById("nextLabel").textContent=day<dc?`Day ${day+1}`:'';
+  document.getElementById("rv").classList.add("open");
+}
+
+function closeRV(){document.getElementById("rv").classList.remove("open");curDay=null;openKey=null;}
+
+/* ─── EVENTS ─── */
+document.getElementById("rvBack").onclick=closeRV;
+document.getElementById("prevDay").onclick=()=>{if(curDay>1)openDay(curDay-1);};
+document.getElementById("nextDay").onclick=()=>{if(curDay<DIM[curMonth])openDay(curDay+1);};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeRV();});
+
+/* ─── INIT ─── */
+render();
+setTimeout(()=>{const t=document.getElementById(`d-${TM}-${TD}`);if(t)t.scrollIntoView({behavior:"smooth",block:"center"});},300);
+</script>
+</body>
 </html>
